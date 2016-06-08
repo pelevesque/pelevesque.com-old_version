@@ -1,0 +1,151 @@
+/************************************************
+* PEL CSS RESET
+*
+* Author: Pierre-Emmanuel Lévesque
+* License: none (public domain)
+* Based on Eric Meyer and HTML5 Doctor resets
+*************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, main, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Fixes old browser resize bugs */
+html {
+  font-size: 100.01%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, main, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+/***********************
+ * HIDDEN
+ ***********************/
+
+header span {
+  display: none;
+}
+
+/************************************************
+* COMMON
+*************************************************/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  -webkit-transition: color 500ms linear, background 500ms linear;
+  -moz-transition: color 500ms linear, background 500ms linear;
+  -ms-transition: color 500ms linear, background 500ms linear;
+  -o-transition: color 500ms linear, background 500ms linear;
+  transition: color 500ms linear, background 500ms linear;
+}
+
+/************************************************
+* COMMON
+*************************************************/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  padding: 15px;
+  background: #fff;
+  z-index: 99;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: height 500ms linear, opacity 500ms linear;
+  -moz-transition: height 500ms linear, opacity 500ms linear;
+  -ms-transition: height 500ms linear, opacity 500ms linear;
+  -o-transition: height 500ms linear, opacity 500ms linear;
+  transition: height 500ms linear, opacity 500ms linear;
+}
+
+.header_scroll {
+  opacity: 0.5;
+}
+
+header { display: flex; justify-content: space-between; align-items: center }
+header div, header ul { display: flex; justify-content: flex-start; }
+header nav { margin-left: 80px; }
+header nav li { margin-right: 15px; }
+header > ul li { margin-left: 15px; }
+
+header h1 { cursor: pointer }
+
+#banner {   background: #ffff00; border: 1px solid #cccc00 }
+#about {    background: #6666ff; border: 1px solid #33ccff }
+#projects { background: #00ff00; border: 1px solid #006600 }
+footer {    background: #ff0000; border: 1px solid #000000 }
+
+#banner, #about, #projects, footer { display: block; height: 700px }
+
+/************************************************
+* FONT
+*************************************************/
+
+body {
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 400;
+ }
+ 
+header { font-size: 1.1em }
+header > ul { font-size: 1.5em }

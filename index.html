@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pierre-Emmanuel Lévesque</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Pierre-Emmanuel Lévesque">
+    <meta name="description" content="Pierre-Emmanuel Lévesque's programming website">
+    <meta name="keywords" content="programming, website, design, Pierre, Emmanuel, Lévesque">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400' rel='stylesheet' type='text/css'>
+    <link href="assets/css/site.css" rel="stylesheet" type="text/css">
+    <!--[if IE]><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="assets/js/site.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $.scrollIt();
+        $(window).scroll(function(){
+          if($(window).scrollTop() >= $('header').outerHeight()) {
+            $("header").addClass("header_scroll");
+          } else {
+            $("header").removeClass("header_scroll");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 data-scroll-nav="0" class="active">Pierre-Emmanuel Lévesque</h1>
+        <nav>
+          <ul>
+            <li><a data-scroll-nav="1" href="#about">about</a></li>
+            <li><a data-scroll-nav="2" href="#projects">projects</a></li>
+          </ul>
+        </nav>
+      </div>
+      <ul>
+        <li><a href="https://github.com/pelevesque" title="GitHub"><span>Github </span><i class="fa fa-github"></i></a></li>
+        <li><a href="http://stackoverflow.com/users/3970381/pierre-emmanuel-levesque" title="StackOverflow"><span>StackOverflow </span><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a href="#" title="LinkedIn"><span>LinkedIn </span><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </header>
+    <div id="banner" data-scroll-index="0"></div>
+    <div id="about" data-scroll-index="1"></div>
+    <div id="projects" data-scroll-index="2"></div>
+    <footer></footer>
+  </body>
+</html>
