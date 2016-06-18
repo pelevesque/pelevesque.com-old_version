@@ -24,9 +24,7 @@ output, ruby, section, summary, time, mark, audio, video {
 }
 
 /* Fixes old browser resize bugs */
-html {
-  font-size: 100.01%;
-}
+html { font-size: 100.01%; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -34,25 +32,15 @@ footer, header, main, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
+body { line-height: 1 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none }
 
-del {
-  text-decoration: line-through;
-}
+del { text-decoration: line-through }
 
-ol, ul {
-  list-style: none;
-}
+ol, ul { list-style: none }
 
-blockquote, q {
-  quotes: none;
-}
+blockquote, q { quotes: none }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -68,14 +56,6 @@ table {
 abbr[title], dfn[title] {
   border-bottom:1px dotted;
   cursor:help;
-}
-
-/***********************
- * HIDDEN
- ***********************/
-
-header span {
-  display: none;
 }
 
 /************************************************
@@ -97,8 +77,15 @@ a {
   transition: color 500ms linear, background 500ms linear;
 }
 
+.button {
+  padding: 1.2em 2.5em;
+  cursor: pointer;
+  border-radius: 5%;
+  text-transform: uppercase;
+}
+
 /************************************************
-* COMMON
+* Layout & Design
 *************************************************/
 
 header {
@@ -106,9 +93,13 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: auto;
   padding: 15px;
-  background: #fff;
+  background: transparent;
+  color: #fff;
   z-index: 99;
   overflow: hidden;
   opacity: 1;
@@ -120,32 +111,138 @@ header {
 }
 
 .header_scroll {
-  opacity: 0.5;
+  opacity: 0.7;
+  background: #000;
 }
-
-header { display: flex; justify-content: space-between; align-items: center }
-header div, header ul { display: flex; justify-content: flex-start; }
-header nav { margin-left: 80px; }
-header nav li { margin-right: 15px; }
-header > ul li { margin-left: 15px; }
 
 header h1 { cursor: pointer }
 
-#banner {   background: #ffff00; border: 1px solid #cccc00 }
-#about {    background: #6666ff; border: 1px solid #33ccff }
-#projects { background: #00ff00; border: 1px solid #006600 }
-footer {    background: #ff0000; border: 1px solid #000000 }
+header ul {
+  display: flex;
+  justify-content: flex-start;
+}
 
-#banner, #about, #projects, footer { display: block; height: 700px }
+header a:link { color: #fff }
+header a:visited { color: #fff }
+header a:hover { color: #bbb }
+header a:active { color: #bbb }
 
+header span { display: none }
+
+header ul li { margin-left: 15px }
+
+#banner, #projects,footer {
+  display: block;
+  height: 675px
+}
+
+/* #banner > div { border: 1px solid #ff0000 } */
+
+#banner #intro { max-width: 600px; }
+
+#banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: 
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)
+    ),
+    /* your image */
+    url(background3.jpg);
+  font-size: 1.8em;
+  line-height: 1.5em;
+  color: #fff;  
+}
+
+#banner img {
+ border-radius: 50%;
+ border: 2px solid #fff;
+}
+
+#banner #intro { text-align: center;  }
+
+
+
+#about {
+	
+  text-align: center;	
+  padding: 50px;
+
+  background: #fff;
+
+
+}
+
+#about h2 {
+ font-size: 3em;	
+margin-bottom: 50px;
+}
+
+#about p {
+
+	/* border: 1px solid #ff0000; */
+max-width: 650px;	
+margin: auto;
+margin-bottom: 50px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  color: #999;
+}
+
+#about .button {
+  color: #fff;
+  background: #4cca86;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+}
+
+#about .button:hover { background: #34c479 }
+
+#projects { background: #fefefe; }
+
+#websites h2 {
+	
+font-size: 2em;
+text-align: center;	
+}
+
+#websites .website:hover {
+	cursor: pointer;
+	  background: #ddd;
+}
+
+
+#websites .website {
+	
+	  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+  
+  border: 1px solid #ccc;
+  margin: 50px;
+  padding: 50px;
+  background: #fefefe;
+	
+}
+
+#websites .website .description {
+	max-width: 450px;
+}
+
+#websites img { width: 450px; height: 450px; padding: 5px; border: 1px solid #ddd; }
 /************************************************
-* FONT
+* Fonts
 *************************************************/
 
 body {
   font-family: "Inconsolata", sans-serif;
   font-weight: 400;
- }
+}
  
 header { font-size: 1.1em }
-header > ul { font-size: 1.5em }
+header ul.social_media { font-size: 1.5em }
+
