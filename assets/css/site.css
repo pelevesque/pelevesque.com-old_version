@@ -77,7 +77,7 @@ a {
   transition: color 500ms linear, background 500ms linear;
 }
 
-.button {
+a[role="button"] {
   padding: 1.2em 2.5em;
   cursor: pointer;
   border-radius: 5%;
@@ -131,16 +131,12 @@ header span { display: none }
 
 header ul li { margin-left: 15px }
 
-#banner, #projects,footer {
+#banner, main, footer {
   display: block;
   height: 675px
 }
 
-/* #banner > div { border: 1px solid #ff0000 } */
-
-#banner #intro { /* max-width: 800px; */ }
-
-#banner #intro p { margin-bottom: 30px; }
+#banner p { margin-bottom: 30px; }
 
 #banner {
   display: flex;
@@ -166,87 +162,77 @@ header ul li { margin-left: 15px }
  border: 0px solid #fff;
 }
 
-#banner #intro { text-align: center;  }
+#banner div { text-align: center; }
 
-#banner .button {
-
-
+#banner a[role="button"] {
 background: #fedf02;
 padding: 0.5em 1em;
 color: #000;
-
 }
 
-
-
 #about {
-	
-  text-align: center;	
+  text-align: center;
   padding: 50px;
-
   background: #fff;
-
-
 }
 
 #about h2 {
- font-size: 3em;	
-margin-bottom: 50px;
+ font-size: 3em;
+  margin-bottom: 50px;
 }
 
 #about p {
-
-	/* border: 1px solid #ff0000; */
-max-width: 650px;	
-margin: auto;
-margin-bottom: 50px;
+  /* border: 1px solid #ff0000; */
+  max-width: 650px;	
+  margin: auto;
+  margin-bottom: 50px;
   font-size: 1.2em;
   line-height: 1.2em;
   color: #999;
 }
 
-#about .button {
+#about a[role="button"] {
   color: #fff;
   background: #4cca86;
   letter-spacing: 2px;
   font-size: 0.8em;
 }
 
-#about .button:hover { background: #34c479 }
+#about a[role="button"]:hover { background: #34c479 }
 
-
-#projects h2 {
-	
-font-size: 2em;
-text-align: center;	
+main h2 {
+  font-size: 2em;
+  text-align: center;
   text-transform: uppercase;
 }
 
-#projects .project:hover {
-	cursor: pointer;
-	  background: #ddd;
+main article:hover {
+  cursor: pointer;
+  background: #ddd;
 }
 
-
-#projects .project {
-	
-	  display: flex;
+main article {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row-reverse;
-  
   border: 1px solid #ccc;
   margin: 50px;
   padding: 50px;
   background: #fefefe;
-	
 }
 
-#projects .project .description {
-	max-width: 450px;
+main article .description {
+  max-width: 450px;
 }
 
-#projects img { width: 450px; height: 450px; padding: 5px; border: 1px solid #ddd; }
+main article figure img {
+  width: 450px;
+  height: 450px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
 /************************************************
 * Fonts
 *************************************************/
@@ -255,7 +241,6 @@ body {
   font-family: "Inconsolata", sans-serif;
   font-weight: 400;
 }
- 
-header { font-size: 1.1em }
-header ul.social_media { font-size: 1.5em }
 
+header { font-size: 1.1em }
+header ul.socialmedia_links { font-size: 1.5em }
