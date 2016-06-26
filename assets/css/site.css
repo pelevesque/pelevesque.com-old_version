@@ -54,8 +54,8 @@ table {
 }
 
 abbr[title], dfn[title] {
-  border-bottom:1px dotted;
-  cursor:help;
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 /************************************************
@@ -80,12 +80,13 @@ a {
 a[role="button"] {
   padding: 1.2em 2.5em;
   cursor: pointer;
-  border-radius: 5%;
   text-transform: uppercase;
 }
 
+li a span { display: none }
+
 /************************************************
-* Layout & Design
+* HEADER
 *************************************************/
 
 header {
@@ -127,8 +128,6 @@ header a:visited { color: #fff }
 header a:hover { color: #fedf02 }
 header a:active { color: #fedf02 }
 
-header span { display: none }
-
 header ul li { margin-left: 15px }
 
 #banner, main, footer {
@@ -153,7 +152,7 @@ header ul li { margin-left: 15px }
      url(archi.jpg);
   font-size: 1.8em;
   line-height: 1.5em;
-  color: #fff;  
+  color: #fff;
   text-align: center;
 }
 
@@ -165,9 +164,9 @@ header ul li { margin-left: 15px }
 #banner div { text-align: center; }
 
 #banner a[role="button"] {
-background: #fedf02;
-padding: 0.5em 1em;
-color: #000;
+  background: #fedf02;
+  padding: 0.5em 1em;
+  color: #000;
 }
 
 #about {
@@ -200,37 +199,70 @@ color: #000;
 
 #about a[role="button"]:hover { background: #34c479 }
 
-main h2 {
-  font-size: 2em;
-  text-align: center;
-  text-transform: uppercase;
-}
+/************************************************
+* HEADER
+*************************************************/
 
-main article:hover {
-  cursor: pointer;
-  background: #ddd;
-}
+main h2 { display: none }
 
 main article {
+  margin: 75px 0;
+  padding: 80px 50px 50px 50px;
+  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: row-reverse;
-  border: 1px solid #ccc;
-  margin: 50px;
-  padding: 50px;
-  background: #fefefe;
+  background: #f5f5f5;
 }
 
-main article .description {
-  max-width: 450px;
+main article h3 {
+  font-size: 1.4em;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+main article ul.technologies {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 50px;
+  top: 30px;
+}
+
+/* but not last item */
+main article ul.technologies li:not(:last-child) {
+ margin-right: 20px;
 }
 
 main article figure img {
   width: 450px;
   height: 450px;
-  padding: 5px;
-  border: 1px solid #ddd;
+  margin-right: 50px;
+}
+
+main article .description {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  max-width: 450px;
+}
+
+main article .description p {
+  margin-bottom: 40px;
+}
+
+main article .description p:last-of-type {
+  margin-bottom: 60px;
+}
+
+main article .description a[role="button"] {
+  border: 1px solid #ccc;
+}
+
+main article .description a[role="button"]:hover {
+  background: #cecece;
 }
 
 /************************************************
