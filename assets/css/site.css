@@ -261,23 +261,24 @@ main article .description p:last-of-type {
 main article ul.links {
   display: flex;
   align-items: center;
-
 }
 
-main article ul.links li  {
-	font-size: 1.2em;
-}
-
-main article ul.links li {
+main article ul.links a {
   margin-right: 15px;
   padding: 0.5em 1em;
   cursor: pointer;
   border: 1px solid #ccc;
 }
 
-main article ul.links li:hover {
+main article ul.links a:link, main article ul.links a:visited,
+main article ul.links a:hover, main article ul.links a:active {
+  color: #000;
+}
+
+main article ul.links a:hover {
   background: #ccc;
 }
+
 /************************************************
 * Fonts
 *************************************************/
