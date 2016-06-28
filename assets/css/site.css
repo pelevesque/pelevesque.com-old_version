@@ -206,14 +206,20 @@ header ul li { margin-left: 15px }
 main h2, main article h4 { display: none }
 
 main article {
-  margin: 75px 0;
   padding: 80px 50px 50px 50px;
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: top;
   flex-direction: row-reverse;
-  background: #f5f5f5;
+}
+
+main article:nth-of-type(odd) {
+  background: #bbb;
+}
+
+main article:nth-of-type(even) {
+  background: #ddd;
 }
 
 main article h3 {
