@@ -231,13 +231,13 @@ main article h3 {
 
 main article div {
   margin-top: 50px;
-  font-size: 1.1em;
-  line-height: 1.5em;
-  max-width: 450px;
 }
 
 main article div p {
   margin-bottom: 40px;
+  max-width: 450px;
+  font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 /* technologies */
@@ -251,7 +251,7 @@ main article div ul:first-of-type {
 }
 
 main article div ul:first-of-type li:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 main article div ul:first-of-type li:not(:last-child):after {
@@ -260,6 +260,7 @@ main article div ul:first-of-type li:not(:last-child):after {
 
 /* links */
 main article div ul:last-of-type {
+  font-size: 1.1em;
   display: flex;
   align-items: center;
 }
@@ -288,7 +289,7 @@ main article figure img {
 }
 
 main article div ul:last-of-type a[title="GitHub"]:after,
-main article div ul:last-of-type a[title="archive"]:after,
+main article div ul:last-of-type a[title="archived"]:after,
 main article div ul:last-of-type a[title="location map"]:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -303,7 +304,7 @@ main article div ul:last-of-type a[title="GitHub"]:after {
   content: "\f09b";
 }
 
-main article div ul:last-of-type a[title="archive"]:after {
+main article div ul:last-of-type a[title="archived"]:after {
   content: "\f187";
 }
 
