@@ -284,13 +284,14 @@ main article div ul:last-of-type a:hover {
 /* image */
 main article figure img {
   width: 450px;
-  height: 80%;
+  height: 450px;
   margin-right: 50px;
 }
 
 main article div ul:last-of-type a[title="GitHub"]:after,
-main article div ul:last-of-type a[title="archived"]:after,
-main article div ul:last-of-type a[title="location map"]:after {
+main article div ul:last-of-type a[title="Archived"]:after,
+main article div ul:last-of-type a[title="Location Map"]:after,
+main article div ul:last-of-type a[title="Image Gallery"]:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -304,12 +305,16 @@ main article div ul:last-of-type a[title="GitHub"]:after {
   content: "\f09b";
 }
 
-main article div ul:last-of-type a[title="archived"]:after {
+main article div ul:last-of-type a[title="Archived"]:after {
   content: "\f187";
 }
 
-main article div ul:last-of-type a[title="location map"]:after {
+main article div ul:last-of-type a[title="Location Map"]:after {
   content: "\f276";
+}
+
+main article div ul:last-of-type a[title="Image Gallery"]:after {
+  content: "\f03e";
 }
 
 /************************************************
