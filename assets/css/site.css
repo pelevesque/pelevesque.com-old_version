@@ -200,10 +200,10 @@ header ul li { margin-left: 15px }
 #about a[role="button"]:hover { background: #34c479 }
 
 /************************************************
-* HEADER
+* PROJECTS
 *************************************************/
 
-main h2 { display: none }
+main h2, main article h4 { display: none }
 
 main article {
   margin: 75px 0;
@@ -223,7 +223,19 @@ main article h3 {
   left: 50px;
 }
 
-main article ul.technologies {
+main article div {
+  margin-top: 50px;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  max-width: 450px;
+}
+
+main article div p {
+  margin-bottom: 40px;
+}
+
+/* technologies */
+main article div ul:first-of-type {
   font-size: 1.1em;
   display: flex;
   align-items: center;
@@ -232,51 +244,65 @@ main article ul.technologies {
   top: 30px;
 }
 
-/* but not last item */
-main article ul.technologies li:not(:last-child) {
- margin-right: 20px;
+main article div ul:first-of-type li:not(:last-child) {
+  margin-right: 20px;
 }
 
-main article figure img {
-  width: 450px;
-  height: 450px;
-  margin-right: 50px;
+main article div ul:first-of-type li:not(:last-child):after {
+  content: ",";
 }
 
-main article .description {
-  margin-top: 50px;
-  font-size: 1.1em;
-  line-height: 1.5em;
-  max-width: 450px;
-}
-
-main article .description p {
-  margin-bottom: 40px;
-}
-
-main article .description p:last-of-type {
-  /* margin-bottom: 0; */
-}
-
-main article ul.links {
+/* links */
+main article div ul:last-of-type {
   display: flex;
   align-items: center;
 }
 
-main article ul.links a {
+main article div ul:last-of-type a {
   margin-right: 15px;
   padding: 0.5em 1em;
   cursor: pointer;
   border: 1px solid #ccc;
 }
 
-main article ul.links a:link, main article ul.links a:visited,
-main article ul.links a:hover, main article ul.links a:active {
+main article div ul:last-of-type a:link, main article div ul:last-of-type a:visited,
+main article div ul:last-of-type a:hover, main article div ul:last-of-type a:active {
   color: #000;
 }
 
-main article ul.links a:hover {
+main article div ul:last-of-type a:hover {
   background: #ccc;
+}
+
+/* image */
+main article figure img {
+  width: 450px;
+  height: 80%;
+  margin-right: 50px;
+}
+
+main article div ul:last-of-type a[title="GitHub"]:after,
+main article div ul:last-of-type a[title="archive"]:after,
+main article div ul:last-of-type a[title="location map"]:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: 8px;
+}
+
+main article div ul:last-of-type a[title="GitHub"]:after {
+  content: "\f09b";
+}
+
+main article div ul:last-of-type a[title="archive"]:after {
+  content: "\f187";
+}
+
+main article div ul:last-of-type a[title="location map"]:after {
+  content: "\f276";
 }
 
 /************************************************
