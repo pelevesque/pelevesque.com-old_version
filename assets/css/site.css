@@ -59,8 +59,16 @@ abbr[title], dfn[title] {
 }
 
 /************************************************
-* FONT AWESOME
+* FONTS
 *************************************************/
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata'),
+    url(https://fonts.gstatic.com/s/inconsolata/v12/BjAYBlHtW3CJxDcjzrnZCLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
 
 @font-face {
   font-family: 'FontAwesome';
