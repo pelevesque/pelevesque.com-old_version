@@ -74,11 +74,11 @@ abbr[title], dfn[title] {
   font-style: normal;
 }
 
-header ul.socialmedia_links li a:after,
 main article div ul:last-of-type a[title="GitHub"]:after,
 main article div ul:last-of-type a[title="Archived"]:after,
 main article div ul:last-of-type a[title="Location Map"]:after,
-main article div ul:last-of-type a[title="Image Gallery"]:after {
+main article div ul:last-of-type a[title="Image Gallery"]:after,
+footer ul li a:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -159,7 +159,7 @@ header a:active { color: #fedf02 }
 
 header ul li { margin-left: 15px }
 
-#banner, main, footer {
+#banner {
   display: block;
   height: 675px
 }
@@ -355,26 +355,34 @@ header { font-size: 1.1em }
 /*******************************************************/
 /* Hack to hide link names, but show font awesome icons
 /*******************************************************/
-header ul.socialmedia_links li a {
+
+footer ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer ul li { margin-left: 15px }
+
+footer ul li a {
   font-size: 1px;
   letter-spacing: -1px;
   color: transparent;
 }
 
-header ul.socialmedia_links li a:after  {
+footer ul li a:after  {
  font-size: 1.5rem;
- color: #fff;
+ color: #000;
 }
 /**********************************/
 
-header ul.socialmedia_links li a[title="GitHub"]:after {
+footer ul li a[title="GitHub"]:after {
   content: "\f09b";
 }
 
-header ul.socialmedia_links li a[title="StackOverflow"]:after {
+footer ul li a[title="StackOverflow"]:after {
   content: "\f16c";
 }
 
-header ul.socialmedia_links li a[title="LinkedIn"]:after {
+footer ul li a[title="LinkedIn"]:after {
   content: "\f08c";
 }
