@@ -74,6 +74,7 @@ abbr[title], dfn[title] {
   font-style: normal;
 }
 
+header > ul li a:after,
 main article div ul:last-of-type a[title="GitHub"]:after,
 main article div ul:last-of-type a[title="Archived"]:after,
 main article div ul:last-of-type a[title="Location Map"]:after,
@@ -112,8 +113,6 @@ a[role="button"] {
   text-transform: uppercase;
 }
 
-li a span { display: none }
-
 /************************************************
 * HEADER
 *************************************************/
@@ -145,9 +144,9 @@ header {
   background: #000;
 }
 
-header h1 { cursor: pointer }
+header h1 { display: none; }
 
-header ul {
+header ul { /* not sure */
   display: flex;
   justify-content: flex-start;
 }
@@ -157,7 +156,8 @@ header a:visited { color: #fff }
 header a:hover { color: #fedf02 }
 header a:active { color: #fedf02 }
 
-header ul li { margin-left: 15px }
+header > ul li { margin-left: 15px }
+header nav ul li { margin-right: 15px }
 
 #banner {
   display: block;
@@ -363,26 +363,29 @@ footer ul {
 
 footer ul li { margin-left: 15px }
 
-footer ul li a {
+header > ul li a, footer ul li a {
   font-size: 1px;
   letter-spacing: -1px;
   color: transparent;
 }
 
-footer ul li a:after  {
+header > ul li a:after, footer ul li a:after {
  font-size: 1.5rem;
- color: #000;
 }
+
+header > ul li a:after { color: #fff }
+footer ul li a:after { color: #000 }
+
 /**********************************/
 
-footer ul li a[title="GitHub"]:after {
+a[title="GitHub"]:after {
   content: "\f09b";
 }
 
-footer ul li a[title="StackOverflow"]:after {
+a[title="StackOverflow"]:after {
   content: "\f16c";
 }
 
-footer ul li a[title="LinkedIn"]:after {
+a[title="LinkedIn"]:after {
   content: "\f08c";
 }
