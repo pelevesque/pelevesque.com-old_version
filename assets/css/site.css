@@ -176,11 +176,13 @@ header nav ul li { margin-right: 15px }
   background: 
     /* top, transparent red */
     linear-gradient(
-      rgba(0, 0, 0, 0.95),
-      rgba(0, 0, 0, 0.95)
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
     ),
     /* your image */
-     url(archi.jpg);
+     url(background.jpg);
+     
+     background-size: cover;
   font-size: 1.8em;
   line-height: 1.5em;
   color: #fff;
