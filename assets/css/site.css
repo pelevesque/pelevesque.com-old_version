@@ -347,13 +347,23 @@ header { font-size: 1.1em }
 /* Hack to hide link names, but show font awesome icons
 /*******************************************************/
 
+footer {
+  height: 600px;
+  background: #0000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 footer ul {
   display: flex;
   justify-content: flex-start;
 }
 
-footer ul li { margin-left: 15px }
+footer ul li { padding: 0 50px; }
 
+/* REALLY NEEDED FOR HEADER ??? */
 header > ul li a, footer ul li a {
   font-size: 1px;
   letter-spacing: -1px;
@@ -361,7 +371,7 @@ header > ul li a, footer ul li a {
 }
 
 header > ul li a:after, footer ul li a:after {
- font-size: 1.5rem;
+ font-size: 6rem;
 }
 
 header > ul li a:after { color: #fff }
