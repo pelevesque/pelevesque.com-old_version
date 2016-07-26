@@ -82,7 +82,7 @@ abbr[title], dfn[title] {
   font-style: normal;
 }
 
-header > ul li a:after,
+header nav ul li a[title="top"]:after,
 main article div ul:last-of-type a[title="GitHub"]:after,
 main article div ul:last-of-type a[title="Archived"]:after,
 main article div ul:last-of-type a[title="Location Map"]:after,
@@ -164,8 +164,19 @@ header a:visited { color: #fff }
 header a:hover { color: #fedf02 }
 header a:active { color: #fedf02 }
 
-header > ul li { margin-left: 15px }
-header nav ul li { margin-right: 15px }
+header nav ul li { margin-right: 20px }
+
+header nav ul li a[title="top"] {
+  font-size: 1px;
+  letter-spacing: -1px;
+  color: transparent;
+}
+
+header nav ul li a[title="top"]:after {
+  content: "\f0aa";
+  color: #fff;
+  font-size: 1.5rem;
+}
 
 #banner {
   display: flex;
@@ -202,7 +213,7 @@ header nav ul li { margin-right: 15px }
 
 #about p {
   /* border: 1px solid #ff0000; */
-  max-width: 650px;	
+  max-width: 650px;
   margin: auto;
   margin-bottom: 50px;
   font-size: 1.2em;
@@ -363,18 +374,16 @@ footer ul {
 
 footer ul li { padding: 0 50px; }
 
-/* REALLY NEEDED FOR HEADER ??? */
-header > ul li a, footer ul li a {
+footer ul li a {
   font-size: 1px;
   letter-spacing: -1px;
   color: transparent;
 }
 
-header > ul li a:after, footer ul li a:after {
+footer ul li a:after {
  font-size: 6rem;
 }
 
-header > ul li a:after { color: #fff }
 footer ul li a:after { color: #000 }
 
 /**********************************/
