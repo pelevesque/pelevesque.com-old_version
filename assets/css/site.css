@@ -157,6 +157,7 @@ header h1 { display: none; }
 header ul { /* not sure */
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 header a:link { color: #fff }
