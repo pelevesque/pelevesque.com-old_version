@@ -213,9 +213,9 @@ header nav ul li a[title="contact"]:before {
 }
 
 header nav ul li a[title="top"]:after {
-  content: "\f0aa";
+  content: "\f106";
   color: #fff;
-  font-size: 1.5rem;
+  padding-bottom: 3px;
 }
 
 #banner {
@@ -395,7 +395,7 @@ header {
 }
 
 header nav ul li a[title="top"]:after {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 #banner {
