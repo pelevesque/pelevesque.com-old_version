@@ -59,8 +59,34 @@ abbr[title], dfn[title] {
 }
 
 /************************************************
-* FONTS
+* FONTS SETUP
 *************************************************/
+
+@font-face {
+  font-family: 'LatoRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'LatoBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'LatoSuperThin';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Lato Hairline'), local('Lato-Hairline'), url(https://fonts.gstatic.com/s/lato/v11/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'LatoThin';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
 
 @font-face {
   font-family: 'Inconsolata';
@@ -135,11 +161,12 @@ header {
   align-items: center;
   height: auto;
   padding: 15px;
-  background: transparent;
+  /*background: transparent; */;
+  background: #000;
   color: #fff;
-  z-index: 99;
+  z-index: 999;
   overflow: hidden;
-  opacity: 1;
+  opacity: 0.7;
   -webkit-transition: height 500ms linear, opacity 500ms linear;
   -moz-transition: height 500ms linear, opacity 500ms linear;
   -ms-transition: height 500ms linear, opacity 500ms linear;
@@ -148,8 +175,9 @@ header {
 }
 
 .header_scroll {
-  opacity: 0.7;
-  background: #000;
+  opacity: 1;
+  /*background: #fff;
+  color: #000; */
 }
 
 header h1 { display: none; }
@@ -167,10 +195,21 @@ header a:active { color: #fedf02 }
 
 header nav ul li { margin-right: 20px }
 
+/* hides text */
 header nav ul li a[title="top"] {
   font-size: 1px;
   letter-spacing: -1px;
   color: transparent;
+}
+
+header nav ul li a[title="about"]:after {
+  content: " |";
+  margin-left: 10px;
+}
+
+header nav ul li a[title="contact"]:before {
+  content: " |";
+  margin-right: 10px;
 }
 
 header nav ul li a[title="top"]:after {
@@ -187,16 +226,15 @@ header nav ul li a[title="top"]:after {
   /* align-items: center; */
   background: 
     /* top, transparent red */
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
+   linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
     ),
     /* your image */
      url(background.jpg);
      
      background-size: cover;
-  font-size: 1.8em;
-  line-height: 1.5em;
+
   color: #fff;
   text-align: center;
 }
@@ -348,12 +386,29 @@ main article div ul:last-of-type a[title="Image Gallery"]:after {
 * Fonts
 *************************************************/
 
-body {
-  font-family: "Inconsolata", sans-serif;
-  font-weight: 400;
+header {
+  font-family: 'LatoRegular';
+  font-family: 'LatoThin';
+  font-size: 0.75em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
-header { font-size: 1.1em }
+header nav ul li a[title="top"]:after {
+  font-size: 1.5rem;
+}
+
+#banner {
+  font-family: 'LatoSuperThin';
+  font-size: 2.3em;
+  line-height: 1.5em;
+  letter-spacing: 2px;
+}
+
+#about {
+  font-family: 'LatoThin';
+  font-size: 1em;	
+}
 
 /*******************************************************/
 /* Hack to hide link names, but show font awesome icons
