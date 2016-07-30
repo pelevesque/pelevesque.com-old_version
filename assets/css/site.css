@@ -89,14 +89,6 @@ abbr[title], dfn[title] {
 }
 
 @font-face {
-  font-family: 'Inconsolata';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Inconsolata'),
-    url(https://fonts.gstatic.com/s/inconsolata/v12/BjAYBlHtW3CJxDcjzrnZCLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
-}
-
-@font-face {
   font-family: 'FontAwesome';
   src: url('font-awesome-4.6.3_fonts/fontawesome-webfont.eot?v=4.6.3');
   src: url('font-awesome-4.6.3_fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'),
