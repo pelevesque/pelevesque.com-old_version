@@ -231,7 +231,7 @@ header nav ul li a[title="top"]:after {
       rgba(0, 0, 0, 0.55)
     ),
     /* your image */
-     url(background.jpg);
+     url('banner/banner_1440x810.jpg');
      
      background-size: cover;
 
