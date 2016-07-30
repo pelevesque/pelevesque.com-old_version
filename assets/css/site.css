@@ -215,8 +215,8 @@ header nav ul li a[title="top"]:after {
   background: 
     /* top, transparent red */
    linear-gradient(
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.55)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
     ),
     /* your image */
      url('banner/banner_darkened.jpg');
