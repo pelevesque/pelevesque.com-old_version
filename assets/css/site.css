@@ -143,7 +143,7 @@ header {
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   height: auto;
   padding: 15px;
@@ -162,8 +162,6 @@ header {
 
 .header_scroll {
   opacity: 1;
-  /*background: #fff;
-  color: #000; */
 }
 
 header h1 { display: none; }
@@ -204,6 +202,10 @@ header nav ul li a[title="top"]:after {
   padding-bottom: 3px;
 }
 
+/************************************************
+* BANNER
+*************************************************/
+
 #banner {
   display: flex;
   flex-direction: column;
@@ -217,13 +219,19 @@ header nav ul li a[title="top"]:after {
       rgba(0, 0, 0, 0.55)
     ),
     /* your image */
-     url('banner/banner_1440x810.jpg');
+     url('banner/banner_darkened.jpg');
      
      background-size: cover;
 
   color: #fff;
   text-align: center;
 }
+
+
+
+
+
+
 
 #about {
   text-align: center;
