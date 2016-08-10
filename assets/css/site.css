@@ -257,12 +257,7 @@ header nav ul li a.active, header nav ul li a[title="top"].active:after {
 }
 
 #banner {
-  background:
-   linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('banner/banner_1920x1080.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('banner/banner_1920x1080.jpg');
   background-size: cover;
   color: #bbb;
 }
@@ -358,8 +353,11 @@ footer ul li a:after {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
+header, #banner {
   font-family: 'LatoLight';
+}
+
+header {
   font-size: 0.75em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -393,7 +391,6 @@ header nav ul li a[title="contact"]:before {
 }
 
 #banner {
-  font-family: 'LatoLight';
   font-size: 2.3em;
   line-height: 1.7em;
   letter-spacing: 2px;
@@ -483,6 +480,18 @@ a[title="LinkedIn"]:after {
 }
 
 
+/*
 
-<i class="fa fa-users" aria-hidden="true"></i>
-/* -- What is Done -- */
+@media (max-width: 1440px) {
+  #banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner/banner_1440x810.jpg');
+  }
+}
+
+@media (max-width: 1024px) {
+  #banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner/banner_1024x576.jpg');
+  }
+}
+
+*/
