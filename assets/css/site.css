@@ -58,23 +58,11 @@ abbr[title], dfn[title] {
   cursor: help;
 }
 
-/************************************************
-* COMMON
-*************************************************/
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-a {
-  -webkit-transition: color 500ms linear, background 500ms linear;
-  -moz-transition: color 500ms linear, background 500ms linear;
-  -ms-transition: color 500ms linear, background 500ms linear;
-  -o-transition: color 500ms linear, background 500ms linear;
-  transition: color 500ms linear, background 500ms linear;
 }
 
 /************************************************
@@ -89,8 +77,6 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: left;
   padding: 10px;
   z-index: 99;
   overflow: hidden;
@@ -108,22 +94,6 @@ header nav ul {
 }
 
 header nav ul li { margin: 0 8px; }
-
-/* twice as much as (header nav ul li) margin */
-header nav ul li a[title="about"]:after {
-  margin-left: 16px;
-}
-
-header nav ul li a[title="contact"]:before {
-  margin-right: 16px;
-}
-
-/* hides text */
-header nav ul li a[title="top"] {
-  font-size: 1px;
-  letter-spacing: -1px;
-  color: transparent;
-}
 
 #banner {
   display: flex;
@@ -218,7 +188,8 @@ main article figure img {
 main article div ul:last-of-type a[title="GitHub"]:after,
 main article div ul:last-of-type a[title="Archived"]:after,
 main article div ul:last-of-type a[title="Location Map"]:after,
-main article div ul:last-of-type a[title="Image Gallery"]:after {
+main article div ul:last-of-type a[title="Image Gallery"]:after,
+main article div ul:last-of-type a[title="Forum Post"]:after {
   margin-left: 8px;
 }
 
@@ -248,6 +219,14 @@ footer ul li a {
 * COLORS
 *************************************************/
 
+a {
+  -webkit-transition: color 500ms linear, background 500ms linear;
+  -moz-transition: color 500ms linear, background 500ms linear;
+  -ms-transition: color 500ms linear, background 500ms linear;
+  -o-transition: color 500ms linear, background 500ms linear;
+  transition: color 500ms linear, background 500ms linear;
+}
+
 header {
   background: #212121;
   opacity: 0.7;
@@ -268,7 +247,7 @@ header nav ul li a[title="about"]:after, header nav ul li a[title="contact"]:bef
 
 header nav ul li a:link, header nav ul li a:visited,
 header nav ul li a[title="top"]:link:after, header nav ul li a[title="top"]:visited:after {
-  color: #bbb
+  color: #bbb;
 }
 
 header nav ul li a:hover, header nav ul li a:active,
@@ -369,6 +348,7 @@ main article div ul:last-of-type a[title="GitHub"]:after,
 main article div ul:last-of-type a[title="Archived"]:after,
 main article div ul:last-of-type a[title="Location Map"]:after,
 main article div ul:last-of-type a[title="Image Gallery"]:after,
+main article div ul:last-of-type a[title="Forum Post"]:after,
 footer ul li a:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -385,7 +365,14 @@ header {
   text-transform: uppercase;
 }
 
-/* These are design elements.... */
+/* hides text for header nav ul li a[title="top"]:after */
+header nav ul li a[title="top"] {
+  font-size: 1px;
+  letter-spacing: -1px;
+  color: transparent;
+  margin-right: 3px;
+}
+
 header nav ul li a[title="top"]:after {
   content: "\f106";
   padding-bottom: 3px;
@@ -394,6 +381,15 @@ header nav ul li a[title="top"]:after {
 
 header nav ul li a[title="about"]:after, header nav ul li a[title="contact"]:before {
   content: "|";
+}
+
+/* twice as much as (header nav ul li) margin */
+header nav ul li a[title="about"]:after {
+  margin-left: 16px;
+}
+
+header nav ul li a[title="contact"]:before {
+  margin-right: 16px;
 }
 
 #banner {
@@ -451,7 +447,7 @@ footer > a {
   font-size: 3em;
 }
 
-main article div ul:last-of-type a[title="GitHub"]:after {
+main article div ul:last-of-type a[title="GitHub"]:after, a[title="GitHub"]:after {
   content: "\f09b";
 }
 
@@ -467,16 +463,16 @@ main article div ul:last-of-type a[title="Image Gallery"]:after {
   content: "\f03e";
 }
 
-
-
-
-
-
-
-
-a[title="GitHub"]:after {
-  content: "\f09b";
+main article div ul:last-of-type a[title="Forum Post"]:after {
+  content: "\f0c0";
 }
+
+
+
+
+
+
+
 
 a[title="StackOverflow"]:after {
   content: "\f16c";
@@ -487,3 +483,6 @@ a[title="LinkedIn"]:after {
 }
 
 
+
+<i class="fa fa-users" aria-hidden="true"></i>
+/* -- What is Done -- */
