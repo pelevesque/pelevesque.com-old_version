@@ -8,9 +8,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 
 /* Run Scrollit */
 $(document).ready(function() {
-    $.scrollIt({
-        topOffset: -49
-    });
+    $.scrollIt();
     $(window).scroll(function(){
         if($(window).scrollTop() >= $('header').outerHeight()) {
             $("header").addClass("header_scroll");
