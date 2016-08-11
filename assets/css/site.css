@@ -70,7 +70,8 @@ abbr[title], dfn[title] {
 *************************************************/
 
 /* make all sections full screen */
-section, article, footer { height: 100vh; }
+/* 101vh fixes bug on safari */
+section, article, footer { height: 101vh; }
 
 header {
   position: fixed;
