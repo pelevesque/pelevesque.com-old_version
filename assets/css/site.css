@@ -468,6 +468,7 @@ footer ul li a:after {
 
 footer > a {
   font-size: 3em;
+  letter-spacing: 1px;
 }
 
 main article div ul:last-of-type a[title="GitHub"]:after, a[title="GitHub"]:after {
