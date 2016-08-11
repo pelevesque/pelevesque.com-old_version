@@ -208,13 +208,6 @@ footer ul {
 
 footer ul li { padding: 0 50px; }
 
-/* hides text */
-footer ul li a {
-  font-size: 1px;
-  letter-spacing: -1px;
-  color: transparent;
-}
-
 /************************************************
 * COLORS
 *************************************************/
@@ -436,6 +429,13 @@ footer {
   font-family: 'LatoLight';
 }
 
+/* hides text */
+footer ul li a {
+  font-size: 1px;
+  letter-spacing: -1px;
+  color: transparent;
+}
+
 footer ul li a:after {
   font-size: 6rem;
 }
@@ -443,6 +443,14 @@ footer ul li a:after {
 footer > a {
   font-size: 3em;
 }
+
+
+
+
+
+
+
+
 
 main article div ul:last-of-type a[title="GitHub"]:after, a[title="GitHub"]:after {
   content: "\f09b";
@@ -481,7 +489,6 @@ a[title="LinkedIn"]:after {
 
 
 /*
-
 @media (max-width: 1440px) {
   #banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner/banner_1440x810.jpg');
