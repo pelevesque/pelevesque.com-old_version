@@ -113,18 +113,30 @@ header nav ul li { margin: 0 8px; }
 #about {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
-  padding: 0 100px;
+  align-items: center;
 }
 
 #about h2, #about h3 span {
   display: none;
 }
 
+#about > div:first-of-type {
+  margin-bottom: 60px;
+}
+
 #about ul {
   display: flex;
   justify-content: center;
+}
+
+#about ul li {
+  margin: 0 10px;
+}
+
+#about div:nth-child(3) {
+  margin-bottom: 20px;
 }
 
 main h2, main article h4 { display: none }
@@ -226,7 +238,7 @@ header {
 }
 
 .header_scroll {
-  opacity: 1;
+  opacity: 0.4;
 }
 
 /* These are design elements.... */
@@ -256,8 +268,16 @@ header nav ul li a.active, header nav ul li a[title="top"].active:after {
 }
 
 #about {
-  color:#212121;
-  background: #dedede;
+  background: #212121;
+  color: #bbb;
+}
+
+#about ul li a:link, #about ul li a:visited {
+  color: #666;
+}
+
+#about ul li a:hover, #about ul li a:active {
+  color: #fff;
 }
 
 main article {
@@ -346,7 +366,7 @@ footer ul li a:after {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header, #banner {
+header, #banner, #about {
   font-family: 'LatoLight';
 }
 
@@ -389,13 +409,19 @@ header nav ul li a[title="contact"]:before {
   letter-spacing: 2px;
 }
 
-#about {
-  font-family: 'LatoLight';
+#about div p {
   font-size: 2em;
+  line-height: 1.6em;
+}
+
+#about h3 {
+  font-size: 1.6em;
+  line-height: 2.4em;
+  letter-spacing: 1px;
 }
 
 #about ul {
-  font-size: 1.2em
+  font-size: 1.4em;
 }
 
 main article h3 {
@@ -444,14 +470,6 @@ footer > a {
   font-size: 3em;
 }
 
-
-
-
-
-
-
-
-
 main article div ul:last-of-type a[title="GitHub"]:after, a[title="GitHub"]:after {
   content: "\f09b";
 }
@@ -472,13 +490,6 @@ main article div ul:last-of-type a[title="Forum Post"]:after {
   content: "\f0c0";
 }
 
-
-
-
-
-
-
-
 a[title="StackOverflow"]:after {
   content: "\f16c";
 }
@@ -486,7 +497,6 @@ a[title="StackOverflow"]:after {
 a[title="LinkedIn"]:after {
   content: "\f08c";
 }
-
 
 /*
 @media (max-width: 1440px) {
@@ -500,5 +510,4 @@ a[title="LinkedIn"]:after {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner/banner_1024x576.jpg');
   }
 }
-
 */
