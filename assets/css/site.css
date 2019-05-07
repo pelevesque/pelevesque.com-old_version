@@ -133,7 +133,6 @@ main h2, main article h4 { display: none; }
 /* Font Awesome */
 main article a[title="GitHub"]:after,
 main article a[title="Archived"]:after,
-main article a[title="Location Map"]:after,
 main article a[title="Image Gallery"]:after,
 main article a[title="Forum Post"]:after {
   margin-left: 8px;
@@ -270,7 +269,7 @@ main article h3 span:nth-child(2) { color: #999; }
 /* links */
 main article div div:nth-child(4) a { border: 1px solid #ccc; }
 
-main article div div:nth-child(4) a:link, 
+main article div div:nth-child(4) a:link,
 main article div div:nth-child(4) a:visited,
 main article div div:nth-child(4) a:hover,
 main article div div:nth-child(4) a:active {
@@ -347,7 +346,6 @@ ul.nav-vertical li a:after,
 header nav ul li a[title="top"]:after,
 main article div ul:last-of-type a[title="GitHub"]:after,
 main article div ul:last-of-type a[title="Archived"]:after,
-main article div ul:last-of-type a[title="Location Map"]:after,
 main article div ul:last-of-type a[title="Image Gallery"]:after,
 main article div ul:last-of-type a[title="Forum Post"]:after,
 footer ul li a:after {
@@ -374,10 +372,6 @@ a[title="GitHub"]:after, main article div ul:last-of-type a[title="GitHub"]:afte
 
 main article div ul:last-of-type a[title="Archived"]:after {
   content: "\f187";
-}
-
-main article div ul:last-of-type a[title="Location Map"]:after {
-  content: "\f276";
 }
 
 main article div ul:last-of-type a[title="Image Gallery"]:after {
