@@ -1,6 +1,6 @@
 # About
 
-My personal website. (old version)
+My website. (old version)
 
 Archived at: http://www.pelevesque.com/archive/pelevesque.com-old_version
 
